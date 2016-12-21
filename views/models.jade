@@ -1,0 +1,19 @@
+extends _shared
+
+block body
+	.models
+		h2 
+			span Models we work on
+
+			//- Implement sorting here
+			span.pull-right
+				if descending
+					//glyphicons or fontawesome icons should be used
+					a.sort(href="/models") Z-A
+
+				else
+					a.sort(href="/models?descending=true") A-Z
+
+		ul.list-group
+			for model in models
+				li.list-group-item=model

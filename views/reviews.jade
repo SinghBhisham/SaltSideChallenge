@@ -1,0 +1,16 @@
+extends _shared
+
+block body
+	.reviews
+		h2 Customer reviews
+		//- Implement search here
+		form(method="get", action="/reviews")
+			div.input-group.col-md-12
+				input.form-control(type="text", name="q", value=q)
+				span.input-group-addon.submit
+					input.form-control(type="submit")
+
+		for review in reviews
+			blockquote
+				p= review.content
+				footer= review.source

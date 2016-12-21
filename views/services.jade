@@ -1,0 +1,29 @@
+extends _shared
+
+block body
+	.services
+		h2 Services we provide
+
+		//- Implement filtering here
+
+		label FilterBy: 
+		
+		div.btn-toolbar(role="btn-group")
+			button.btn.btn-default
+				a(href="/services?filterBy=repair") repair
+
+			button.btn.btn-default
+				a(href="/services?filterBy=maintenance") maintenance
+
+			button.btn.btn-default
+				a(href="/services?filterBy=cosmetic") cosmetic
+			button.btn.btn-default
+				a(href="/services") none
+
+		ul.list-group
+			for service in services
+				li.list-group-item
+					h4= service.job
+					p= service.cost
+					p= service.type
+

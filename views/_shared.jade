@@ -1,0 +1,21 @@
+html
+	head
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=1.0")
+		link(rel='stylesheet', href='stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='stylesheets/style.css')
+		title Furiosas Auto Shop
+		block head
+	body
+		nav.navbar.navbar-default
+			.container-fluid
+				ul.nav.navbar-nav
+					li
+						a(href='/') Home
+					li
+						a(href='/services') Services
+					li
+						a(href='/models') Models
+					li
+						a(href='/reviews') Reviews
+		.container
+			block body
